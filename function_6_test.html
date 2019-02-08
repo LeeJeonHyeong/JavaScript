@@ -1,0 +1,25 @@
+<script>
+ var num = 1;
+ function gallery(direct) {
+     if(direct) {
+         if(num == 8) return;
+         num ++;
+     } else {
+         if(num == 1) return;
+         num --;
+     }
+     
+     var imgTag = document.getElementById("photo");              // id 값이 "photo"인 이미지 태그를 선택한다.
+     imgTag.setAttribute("src", "images/pic_" + num + ".jpg");   // 그런 다음 "src"속성을 새 값으로 설정한다
+ }
+</script>
+</head>
+<body>
+ <div id = "galleryZone">
+     <p><img src="images/pic_1.jpg" id="photo" alt=""> </p>
+    <p>
+        <button onclick="gallery(0)">이전</button>
+        <button onclick="gallery(1)">다음</button>
+    </p>      
+ </div>
+</body>

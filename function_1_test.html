@@ -1,0 +1,19 @@
+<script>
+ var count = 0;
+
+ myFnc();          // 함수 호출문이 먼저 나와도 호이스팅(hoisting) 방식이 적용됭 정상적으로 함수를 호출한다.
+
+ function myFnc() {
+     count++;
+     document.write("hello" + count, "<br>");
+ }
+
+ myFnc();
+
+ var theFnc = function() {
+     count++;
+     document.write("bye" + count, "<br>");
+ }
+
+ theFnc();
+</script>
